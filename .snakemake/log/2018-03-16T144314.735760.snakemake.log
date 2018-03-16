@@ -1,0 +1,24 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	hello_world
+	2
+
+rule hello_world:
+    output: world.txt
+    jobid: 1
+
+Finished job 1.
+1 of 2 steps (50%) done
+
+localrule all:
+    input: world.txt
+    jobid: 0
+
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: /home/kevin/snaketest/.snakemake/log/2018-03-16T144314.735760.snakemake.log
